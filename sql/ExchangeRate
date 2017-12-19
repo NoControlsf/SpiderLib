@@ -1,0 +1,11 @@
+CREATE TABLE ExchangeRate(
+CurrencyName VARCHAR(20),       --货币名称
+PurchasingSpotExchangePrice DOUBLE,       --现汇买入价
+PurchasingForeignCashPrice DOUBLE,       --现钞买入价
+SpotSellingRate DOUBLE,         --现汇卖出价
+SellingForeignCashPrice DOUBLE,         --现钞卖出价
+MiddleBankDiscountPrice DOUBLE,           --中行折算价
+ReleaseDate VARCHAR(10),         --发布日期
+ReleaseTime VARCHAR(8),       --发布时间
+OperateTime VARCHAR(19)       --操作时间
+);
