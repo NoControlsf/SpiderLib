@@ -1,11 +1,11 @@
 CREATE TABLE ExchangeRate(
-CurrencyName VARCHAR(20),       --»õ±ÒÃû³Æ
-PurchasingSpotExchangePrice DOUBLE,       --ÏÖ»ãÂòÈë¼Û
-PurchasingForeignCashPrice DOUBLE,       --ÏÖ³®ÂòÈë¼Û
-SpotSellingRate DOUBLE,         --ÏÖ»ãÂô³ö¼Û
-SellingForeignCashPrice DOUBLE,         --ÏÖ³®Âô³ö¼Û
-MiddleBankDiscountPrice DOUBLE,           --ÖĞĞĞÕÛËã¼Û
-ReleaseDate VARCHAR(10),         --·¢²¼ÈÕÆÚ
-ReleaseTime VARCHAR(8),       --·¢²¼Ê±¼ä
-OperateTime VARCHAR(19)       --²Ù×÷Ê±¼ä
+CurrencyName VARCHAR(20),       --è´§å¸åç§°
+PurchasingSpotExchangePrice DOUBLE,       --ç°æ±‡ä¹°å…¥ä»·
+PurchasingForeignCashPrice DOUBLE,       --ç°é’ä¹°å…¥ä»·
+SpotSellingRate DOUBLE,         --ç°æ±‡å–å‡ºä»·
+SellingForeignCashPrice DOUBLE,         --ç°é’å–å‡ºä»·
+MiddleBankDiscountPrice DOUBLE,           --ä¸­è¡ŒæŠ˜ç®—ä»·
+ReleaseDate VARCHAR(10),         --å‘å¸ƒæ—¥æœŸ
+ReleaseTime VARCHAR(8),       --å‘å¸ƒæ—¶é—´
+OperateTime VARCHAR(19)       --æ“ä½œæ—¶é—´
 );
