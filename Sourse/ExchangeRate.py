@@ -23,16 +23,22 @@ def parse(html):
         result = []
         for td in td_list:
             result.append(td.get_text())
+        result[0] = '\"' + result[0] + '\"'
+        result[6] = '\"' + result[6] + '\"'
+        result[7] = '\"' + result[7] + '\"'
         for i in range(5):
             a = i+1
             if result[a] == '':
-                result[a] = '0'
+                result[a] = 'null'
+            else:
+                result[a] = '\"' + result[a] + '\"'
         operate_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))  # 获取操作时间
         result.append(operate_time)
+        result[8] = '\"' + result[8] + '\"'
         print(result)
         # 货币名称 现汇买入价 现钞买入价 现汇卖出价 现钞卖出价 中行折算价 发布日期 发布时间 操作时间
         # 写入数据库
-        # mysql_insert(result)
+        mysql_insert(result)
 
 # 写入mysql数据库
 def mysql_insert(result_list):
@@ -46,7 +52,7 @@ def mysql_insert(result_list):
         cursorclass=pymysql.cursors.DictCursor
     )
     cur = conn.cursor()
-    sql = 'insert into ExchangeRate values({})'.format(('\"%s\",' * len(result_list))[:-1])
+    sql = 'insert into ExchangeRate values({})'.format(('%s,' * len(result_list))[:-1])
     # print(sql)
     cur.execute(sql % tuple(result_list))
     cur.close()
