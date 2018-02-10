@@ -5,7 +5,7 @@ import re
 import time
 
 def download_detail(url, headers):
-    wb_data = requests.get(url, headers=headers)
+    wb_data = requests.get(url, headers=headers, timeout=60)
     soup = BeautifulSoup(wb_data.text, 'lxml')
     # print(soup)
     return soup
