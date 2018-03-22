@@ -1,0 +1,9 @@
+CREATE TABLE `construction_project` (
+  `link_address` varchar(200) DEFAULT NULL COMMENT '链接地址',
+  `link_title` varchar(200) DEFAULT NULL COMMENT '链接标题',
+  `link_date` varchar(50) DEFAULT NULL COMMENT '时间',
+  `project_state` varchar(100) DEFAULT NULL COMMENT '工程状态',
+  `belong_area` varchar(100) DEFAULT NULL COMMENT '归属辖区',
+  `isget` int(11) DEFAULT NULL COMMENT '爬取状态'
+) ENGINE=InnoDB AUTO_INCREMENT=22772 DEFAULT CHARSET=utf8 COMMENT='建设工程中标公告列表';
+

@@ -29,7 +29,7 @@ class OpenLawSpider:
             headers.update(host, )
             # 第一步，获取js文件内容
             ret_origin = requests.get(url, headers=headers)
-            # print(ret_origin.text)
+            print(ret_origin.text)
             cookies = requests.utils.dict_from_cookiejar(ret_origin.cookies)
             # 第二步，js代码并还原j_token计算过程，正则匹配window.v
             cmp = re.compile('window.v="(.*)";')
@@ -59,7 +59,7 @@ class OpenLawSpider:
                 result = []
                 result.append(link_href)
                 result.append(link_title)
-                mysql_insert(result)
+                #mysql_insert(result)
 
     # 获取详细信息
     def getLawDetail(self):

@@ -4,12 +4,13 @@ import pymysql
 import requests
 import time
 from bs4 import BeautifulSoup
+from pymongo import MongoClient
 
 # 下载器
 def download(url, headers):
     wb_data = requests.get(url, headers=headers)
     soup = BeautifulSoup(wb_data.text, 'lxml')
-    # print(soup)
+    print(soup)
     return soup
 
 # 解析器
@@ -43,6 +44,7 @@ def parse(soup):
         art_list.append(article['username'])
         print(art_list)
         mysql_insert(art_list)
+        #mongodb_insert(art_list)
 
 
 # 写入mysql数据库
@@ -51,9 +53,9 @@ def mysql_insert(result_list):
         host='localhost',
         port=3306,
         user='root',
-        passwd='',
+        passwd='123',
         db='shares',
-        charset='utf8mb4',
+        charset='utf8',
         cursorclass=pymysql.cursors.DictCursor
     )
     cur = conn.cursor()
@@ -66,6 +68,33 @@ def mysql_insert(result_list):
     cur.close()
     conn.commit()
     conn.close()
+
+
+#写入MongoDB
+def mongodb_insert(art_list):
+    conn = MongoClient('localhost', 27017)
+    db = conn.blogdb  # 连接blogdb数据库，没有则自动创建
+    my_set = db.acf  # 使用acf集合，没有则自动创建
+    my_list = my_set.find({}, {'_id': 0, 'id': 1})
+    print(list(my_list))
+    col = {}
+    col['channel_id'] = art_list[0]
+    col['channel_name'] = art_list[1]
+    col['channel_path'] = art_list[2]
+    col['contribute_time'] = art_list[3]
+    col['description'] = art_list[4]
+    col['id'] = art_list[5]
+    col['parent_channel_id'] = art_list[6]
+    col['parent_channel_name'] = art_list[7]
+    col['realm_id'] = art_list[8]
+    col['realm_name'] = art_list[9]
+    col['title'] = art_list[10]
+    col['head_img_name'] = art_list[11]
+    col['head_img_url'] = art_list[12]
+    col['user_id'] = art_list[13]
+    col['username'] = art_list[14]
+    #my_set.insert(col)
+
 
 # 主程序
 def work_life():
