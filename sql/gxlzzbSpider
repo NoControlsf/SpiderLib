@@ -7,3 +7,12 @@ CREATE TABLE `construction_project` (
   `isget` int(11) DEFAULT NULL COMMENT '爬取状态'
 ) ENGINE=InnoDB AUTO_INCREMENT=22772 DEFAULT CHARSET=utf8 COMMENT='建设工程中标公告列表';
 
+
+CREATE TABLE `government_procurement` (
+  `link_address` varchar(200) DEFAULT NULL COMMENT '链接地址',
+  `link_title` varchar(200) DEFAULT NULL COMMENT '链接标题',
+  `link_date` varchar(50) DEFAULT NULL COMMENT '时间',
+  `isget` int(11) DEFAULT NULL COMMENT '爬取状态',
+  `text_content` text COMMENT '正文内容'
+) ENGINE=InnoDB AUTO_INCREMENT=22772 DEFAULT CHARSET=utf8 COMMENT='政府采购成交结果公示列表';
+
