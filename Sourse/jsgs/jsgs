@@ -22,3 +22,20 @@ CREATE TABLE `jsgs_detail` (
   `company_link` varchar(200) DEFAULT NULL COMMENT '链接'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='江苏国税详情';
 
+CREATE TABLE `jsds_detail` (
+  `taxpayer_name` varchar(200) DEFAULT NULL COMMENT '纳税人名称',
+  `taxpayer_code` varchar(200) DEFAULT NULL COMMENT '纳税人识别号',
+  `organization_code` varchar(200) DEFAULT NULL COMMENT '组织机构代码',
+  `registered_address` varchar(200) DEFAULT NULL COMMENT '注册地址',
+  `legal_representative` varchar(200) DEFAULT NULL COMMENT '法定代表人或者负责人姓名、性别、证件名称及号码',
+  `financial_officer` varchar(200) DEFAULT NULL COMMENT '负有直接责任的财务负责人姓名、性别、证件名称及号码',
+  `agency` varchar(200) DEFAULT NULL COMMENT '负有直接责任的中介机构信息',
+  `case_nature` varchar(200) DEFAULT NULL COMMENT '案件性质',
+  `illegal_facts` varchar(500) DEFAULT NULL COMMENT '主要违法事实',
+  `punishment_situation` varchar(500) DEFAULT NULL COMMENT '相关法律依据及税务处理处罚情况',
+  `inspection_agency` varchar(200) DEFAULT NULL COMMENT '检查机关',
+  `public_agency` varchar(200) DEFAULT NULL COMMENT '公布机关',
+  `province` varchar(200) DEFAULT NULL COMMENT '所属省份',
+  `city` varchar(200) DEFAULT NULL COMMENT '所属城市',
+  `case_link` varchar(200) DEFAULT NULL COMMENT '链接'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='江苏地税案件';

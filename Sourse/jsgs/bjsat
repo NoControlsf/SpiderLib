@@ -1,0 +1,15 @@
+CREATE TABLE `bjsat_detail` (
+  `taxpayer_name` varchar(200) DEFAULT NULL COMMENT '纳税人名称',
+  `taxpayer_code` varchar(200) DEFAULT NULL COMMENT '纳税人识别号或社会信用代码',
+  `organization_code` varchar(200) DEFAULT NULL COMMENT '组织机构代码',
+  `registered_address` varchar(200) DEFAULT NULL COMMENT '注册地址',
+  `legal_representative` varchar(200) DEFAULT NULL COMMENT '法定代表人或者负责人姓名、性别及身份证号码（或其他证件号码）',
+  `illegal_representative` varchar(200) DEFAULT NULL COMMENT '违法期间法人代表或者负责人姓名、性别及身份证号码（或其他证件号码）',
+  `financial_officer` varchar(200) DEFAULT NULL COMMENT '负有直接责任的财务人员姓名、性别及身份证号码（或其他证件号码）',
+  `agency` varchar(200) DEFAULT NULL COMMENT '负有直接责任的中介机构信息',
+  `case_nature` varchar(200) DEFAULT NULL COMMENT '案件性质',
+  `illegal_facts_punishment_situation` varchar(200) DEFAULT NULL COMMENT '主要违法事实,相关法律依据及税务处理处罚情况',
+  `bt_time` varchar(200) DEFAULT NULL COMMENT 'id',
+  `city` varchar(200) DEFAULT NULL COMMENT '直辖市',
+  `area` varchar(200) DEFAULT NULL COMMENT '所属区'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='北京国税详情';
