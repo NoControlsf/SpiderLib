@@ -76,12 +76,6 @@ def mysql_insert(result_list):
     conn.close()
 
 
-def parse():
-    pass
-
-def jsdsSpider():
-    pass
-
 
 if __name__ == "__main__":
     #download('南京', '南京-00823')

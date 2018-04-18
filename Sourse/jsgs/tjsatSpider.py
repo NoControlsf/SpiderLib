@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def download(cid, cname):
+def download(area_id, area_name):
     url = 'http://wzcx.tjsat.gov.cn/cx_cxqyxx.action'
     headers = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -20,11 +20,18 @@ def download(cid, cname):
     }
     form_data = {
         'szsf': 11200000000,
-        'fjdm': cid
+        'fjdm': area_id
     }
     wb_data = requests.post(url, headers=headers, data=form_data)
     soup = BeautifulSoup(wb_data.text, 'lxml')
-    print(soup)
+    #print(soup)
+    trs = soup.find('table').find('table').find_all('tr')
+    if trs[1].get_text().replace('\r', '').replace('\n', '').replace('\t', '').replace(' ', '').replace('\"', '\\\"').replace('\u3000', '') != '本区域内没有符合要求的案件!':
+        for tr in trs[1:]:
+            print(tr)
+            cid = tr.find_all('td')[1]['id']
+            bt_time = tr.find_all('td')[2].get_text().replace('\r', '').replace('\n', '').replace('\t', '').replace(' ', '').replace('\"', '\\\"')
+
 
 
 def parse():
@@ -51,11 +58,11 @@ def tjsatSpider():
     #print(tg_table)
     trs = tg_table.find_all('tr')
     for tr in trs[4:]:
-        cid = tr.find('td')['id']
-        cname = tr.find('td').get_text()
-        print(cid)
-        print(cname)
-        download(cid, cname)
+        area_id = tr.find('td')['id']
+        area_name = tr.find('td').get_text()
+        print(area_id)
+        print(area_name)
+        download(area_id, area_name)
 
 
 if __name__ == "__main__":

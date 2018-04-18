@@ -1,26 +1,4 @@
-CREATE TABLE `jsgs_link` (
-  `area_name` varchar(200) DEFAULT NULL COMMENT '地区',
-  `company_name` varchar(200) DEFAULT NULL COMMENT '公司名称',
-  `company_link` varchar(200) DEFAULT NULL COMMENT '链接',
-  `bt_time` varchar(200) DEFAULT NULL COMMENT '上传日期'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='江苏国税链接';
 
-CREATE TABLE `jsgs_detail` (
-  `taxpayer_name` varchar(200) DEFAULT NULL COMMENT '纳税人名称',
-  `taxpayer_code` varchar(200) DEFAULT NULL COMMENT '纳税人识别号',
-  `organization_code` varchar(200) DEFAULT NULL COMMENT '组织机构代码',
-  `registered_address` varchar(200) DEFAULT NULL COMMENT '注册地址',
-  `legal_representative` varchar(200) DEFAULT NULL COMMENT '法定代表人或者负责人姓名、性别、证件名称及号码',
-  `financial_officer` varchar(200) DEFAULT NULL COMMENT '负有直接责任的财务负责人姓名、性别、证件名称及号码',
-  `agency` varchar(200) DEFAULT NULL COMMENT '负有直接责任的中介机构信息及其从业人员信息',
-  `case_nature` varchar(200) DEFAULT NULL COMMENT '案件性质',
-  `illegal_facts` varchar(200) DEFAULT NULL COMMENT '主要违法事实',
-  `punishment_situation` varchar(200) DEFAULT NULL COMMENT '相关法律依据及税务处理处罚情况',
-  `bt_time` varchar(200) DEFAULT NULL COMMENT '公布日期',
-  `province` varchar(200) DEFAULT NULL COMMENT '所属省份',
-  `city` varchar(200) DEFAULT NULL COMMENT '所属城市',
-  `company_link` varchar(200) DEFAULT NULL COMMENT '链接'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='江苏国税详情';
 
 CREATE TABLE `jsds_detail` (
   `taxpayer_name` varchar(200) DEFAULT NULL COMMENT '纳税人名称',
@@ -39,3 +17,72 @@ CREATE TABLE `jsds_detail` (
   `city` varchar(200) DEFAULT NULL COMMENT '所属城市',
   `case_link` varchar(200) DEFAULT NULL COMMENT '链接'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='江苏地税案件';
+
+CREATE TABLE `zj_l_tax_detail` (
+  `taxpayer_name` varchar(200) DEFAULT NULL COMMENT '纳税人名称',
+  `taxpayer_code` varchar(200) DEFAULT NULL COMMENT '纳税人识别号',
+  `organization_code` varchar(200) DEFAULT NULL COMMENT '组织机构代码',
+  `registered_address` varchar(200) DEFAULT NULL COMMENT '注册地址',
+  `legal_representative` varchar(200) DEFAULT NULL COMMENT '法定代表人姓名、性别及身份证号码',
+  `financial_officer` varchar(200) DEFAULT NULL COMMENT '财务负责人姓名、性别及身份证号码',
+  `agency` varchar(200) DEFAULT NULL COMMENT '负有直接责任的中介机构信息',
+  `case_nature` varchar(200) DEFAULT NULL COMMENT '案件性质',
+  `illegal_facts` varchar(500) DEFAULT NULL COMMENT '主要违法事实',
+  `punishment_situation` varchar(500) DEFAULT NULL COMMENT '相关法律依据及税务处理处罚情况',
+  `province` varchar(200) DEFAULT NULL COMMENT '所属省份',
+  `city` varchar(200) DEFAULT NULL COMMENT '所属城市',
+  `case_link` varchar(200) DEFAULT NULL COMMENT '链接',
+  `catch_time` varchar(200) DEFAULT NULL COMMENT '爬取时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='浙江省地税案件';
+
+CREATE TABLE `hb_l_tax_detail` (
+  `taxpayer_name` varchar(200) DEFAULT NULL COMMENT '纳税人名称',
+  `taxpayer_code` varchar(200) DEFAULT NULL COMMENT '纳税人识别号',
+  `organization_code` varchar(200) DEFAULT NULL COMMENT '组织机构代码',
+  `registered_address` varchar(200) DEFAULT NULL COMMENT '注册地址',
+  `legal_representative` varchar(200) DEFAULT NULL COMMENT '法定代表人或者负责人姓名、性别、证件名称及号码',
+  `financial_officer` varchar(200) DEFAULT NULL COMMENT '负有直接责任的财务负责人姓名、性别、证件名称及号码',
+  `agency` varchar(200) DEFAULT NULL COMMENT '负有直接责任的中介机构信息及其从业人员信息',
+  `case_nature` varchar(200) DEFAULT NULL COMMENT '案件性质',
+  `illegal_facts_and_punishment_situation` varchar(500) DEFAULT NULL COMMENT '主要违法事实和相关法律依据及税务处理处罚情况',
+  `province` varchar(200) DEFAULT NULL COMMENT '所属省份',
+  `city` varchar(200) DEFAULT NULL COMMENT '所属城市',
+  `case_link` varchar(200) DEFAULT NULL COMMENT '链接',
+  `catch_time` varchar(200) DEFAULT NULL COMMENT '爬取时间',
+  `title` varchar(200) DEFAULT NULL COMMENT '标题',
+  `bt_time` varchar(200) DEFAULT NULL COMMENT '发布时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='湖北省地税案件';
+
+CREATE TABLE `gd_l_tax_detail` (
+  `taxpayer_name` varchar(200) DEFAULT NULL COMMENT '纳税人名称',
+  `taxpayer_code` varchar(200) DEFAULT NULL COMMENT '纳税人识别号',
+  `organization_code` varchar(200) DEFAULT NULL COMMENT '组织机构代码',
+  `registered_address` varchar(200) DEFAULT NULL COMMENT '注册地址',
+  `legal_representative` varchar(200) DEFAULT NULL COMMENT '法定代表人姓名、性别及身份证号码',
+  `financial_officer` varchar(200) DEFAULT NULL COMMENT '财务负责人姓名、性别及身份证号码',
+  `agency` varchar(200) DEFAULT NULL COMMENT '负有直接责任的中介机构信息',
+  `case_nature` varchar(200) DEFAULT NULL COMMENT '案件性质',
+  `bt_time` varchar(200) DEFAULT NULL COMMENT '发布时间',
+  `illegal_facts` varchar(500) DEFAULT NULL COMMENT '主要违法事实',
+  `punishment_situation` varchar(500) DEFAULT NULL COMMENT '相关法律依据及税务处理处罚情况',
+  `province` varchar(200) DEFAULT NULL COMMENT '所属省份',
+  `city` varchar(200) DEFAULT NULL COMMENT '所属城市',
+  `case_link` varchar(200) DEFAULT NULL COMMENT '链接',
+  `catch_time` varchar(200) DEFAULT NULL COMMENT '爬取时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='广东省地税案件';
+
+CREATE TABLE `hn_l_tax_detail` (
+  `taxpayer_name` varchar(200) DEFAULT NULL COMMENT '纳税人名称',
+  `taxpayer_code` varchar(200) DEFAULT NULL COMMENT '纳税人识别号',
+  `organization_code` varchar(200) DEFAULT NULL COMMENT '组织机构代码',
+  `registered_address` varchar(200) DEFAULT NULL COMMENT '注册地址',
+  `legal_representative` varchar(200) DEFAULT NULL COMMENT '法定代表人或者负责人姓名、性别、证件名称及号码',
+  `financial_officer` varchar(200) DEFAULT NULL COMMENT '负有直接责任的财务负责人姓名、性别、证件名称及号码',
+  `agency` varchar(200) DEFAULT NULL COMMENT '负责直接责任的中介机构信息及其从业人员信息',
+  `case_nature` varchar(200) DEFAULT NULL COMMENT '案件性质',
+  `illegal_facts_and_punishment_situation` varchar(500) DEFAULT NULL COMMENT '主要违法违章事实和相关法律依据及税务处理处罚情况',
+  `province` varchar(200) DEFAULT NULL COMMENT '所属省份',
+  `city` varchar(200) DEFAULT NULL COMMENT '所属城市',
+  `case_link` varchar(200) DEFAULT NULL COMMENT '链接',
+  `catch_time` varchar(200) DEFAULT NULL COMMENT '爬取时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='海南省地税案件';
