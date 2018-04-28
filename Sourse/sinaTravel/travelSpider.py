@@ -55,7 +55,7 @@ class travelSpider:
         try:
             for tmp in res_json['data']['docs']:
                 print(tmp)
-                self.mongodb_insert(tmp)
+                #self.mongodb_insert(tmp)
         except Exception:
             print('error')
             pass
@@ -111,5 +111,5 @@ class travelSpider:
 
 if __name__ == "__main__":
     travelSpider = travelSpider()
-    #travelSpider.download_link()
-    travelSpider.download_article()
+    travelSpider.download_link()
+    #travelSpider.download_article()
