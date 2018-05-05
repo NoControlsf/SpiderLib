@@ -1,0 +1,11 @@
+CREATE TABLE `drug_info` (
+  `drug_item_name` varchar(255) DEFAULT NULL COMMENT '药品名称',
+  `drug_item_code` varchar(255) DEFAULT NULL COMMENT '商品编码',
+  `drug_item_imglink` varchar(255) DEFAULT NULL COMMENT '药品图片原始链接',
+  `drug_item_imgname` varchar(255) DEFAULT NULL COMMENT '药品图片名称',
+  `drug_size` varchar(255) DEFAULT NULL COMMENT '药品规格',
+  `drug_productcompany` varchar(255) DEFAULT NULL COMMENT '制药厂商',
+  `drug_type_code` varchar(255) DEFAULT NULL COMMENT '药品类型编码',
+  `drug_type_name` varchar(255) DEFAULT NULL COMMENT '药品类型',
+  `catch_date` varchar(255) DEFAULT NULL COMMENT '抓取日期'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='药品信息';
