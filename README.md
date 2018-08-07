@@ -1,0 +1,67 @@
+# SpiderLib
+改项目是我的一些零散的爬虫脚本和一些小程序的集合（该项目会不定期更新，本人比较懒）
+在此对项目做一个整理
+--blogUpdate //个人博客数据更新相关的脚本存放目录
+  --imgInfoUpdate.py  //批量更新博客图片数据的脚本
+--cardSpider  //游戏王卡片资料爬虫
+  --mongodb2mysql.py  //将mongo中的资料转移到mysql数据库中
+  --ourocg_card.py  //卡片数据爬取
+  --ourocg_cardimg.py  //卡图爬取
+--Sourse
+  --acfun  //A站爬虫
+    --ac.sql //A站数据建表语句
+    --worklife.py  //工作生活文章爬虫
+  --cninfo  //巨潮资讯网爬虫
+    --cninfo_detial.py  //上市公司详情爬虫
+    --settings.py  //数据库配置文件
+    --sql  //建表语句
+  --drug  //药房网药品爬虫
+    --drug.sql  //建表语句
+    --drugSpider.py  //药品爬虫脚本
+  --jsgs  //全国国地税爬虫
+    --bjsat  //北京国税建表语句
+    --bjsatSpider.py  //北京国税爬虫
+    --gd_l_tax_spider.py  //广东国税爬虫
+    --hb_l_tax_spider.py  //湖北国税爬虫
+    --hn_l_tax_spider.py  //湖南国税爬虫
+    --jsdsSpider.py  //江苏地税爬虫
+    --jsgs  //其他地方税务建表语句
+    --jsgs_detail.py  //江苏国税详细信息解析
+    --jsgsSpider.py  //江苏国税链接爬取
+    --tjsatspider.py  //天津国税爬虫
+    --zj_l_tax_spider.py  //浙江国税爬虫
+  --sinaTravel
+    --travelSpider.py  //新浪旅游文章爬虫
+  --amacManagerList.py  //中国证券投资基金协会信息公示爬虫
+  --amacManagerOFA.py  //中国证券投资基金协会信息详情解析
+  --amacPDJS.py  //利用无头浏览器测试
+  --baiduzhishu.py  //未完成的爬虫
+  --ExchangeRate.py  //中国银行外汇牌价（实时）爬虫
+  --government_procurement_list.py  //柳州市公共资源交易中心交易信息爬虫一
+  --gxlzzbSpider.py  //柳州市公共资源交易中心交易信息爬虫二
+  --itslaw.py  //itslaw 裁判文书爬虫
+  --jsTest.py  //python运行本地js的脚本
+  --mysql2mongodb_construction_project.py  //柳州公共资源交易信息数据迁移脚本
+  --mysqlTest.py  //调用mysql测试脚本
+  --openLow.py  //openLaw裁判文书爬虫（没有添加代理和多账号）
+  --parse_construction_project.py  //柳州公共资源交易信息解析脚本
+  --shfy.py  //上海法院裁判文书爬虫
+  --shfyDetail.py  //上海法院裁判文书解析脚本
+  --test.py  //爬取豆瓣测试脚本
+  --xueqiuSpider.py  //雪球网爬取测试脚本
+--sql
+  --amac.sql  //中国证券投资基金协会信息公示数据建表语句
+  --ExchangeRate  //中国银行外汇牌价建表语句
+  --gxlzzbspider  //柳州公共资源交易信息建表语句
+  --itslaw.sql  //itslaw裁判文书建表语句
+  --openlaw.sql  //openlaw裁判文书建表语句
+  --shfy.sql  //上海法院裁判文书建表语句
+--util
+--wechatrob
+  --WeChatRobot.py  //微信自动回复机器人脚本
+--zufang  //租房信息脚本
+  --danke
+    --dankeSpider.py  //蛋壳网爬虫
+    --test.html  //测试页面
+  --main.py
+  
